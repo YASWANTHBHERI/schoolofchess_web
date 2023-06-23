@@ -1,0 +1,185 @@
+{% load livereload_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>School Of Chess Srikakulam</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}" >
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!--========================================================================================================================
+                                            TopBar
+=========================================================================================================================-->
+
+    <header class="header-one">
+        <div class="top-bar left">
+            <i class="fa fa-phone"></i>
+            <span class="number">9959118524</span>
+            <i class="fa fa-envelope"></i>
+            <span class="mail">soca@gmail.com</span>
+        </div>
+
+        <div class="social-icons right">
+            <a href="https://www.facebook.com/chinnarao.bheri/" target="_blank"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/bherichinnarao" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/9959118524" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+
+    <!--========================================================================================================================
+                                           NavBar
+=========================================================================================================================-->
+
+    <header class="second-header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="logo">
+                    <a href="#"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+                </div>
+                <button type="button" class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                      <li><a href="{% url 'home' %}" >home</a></li>
+                      <li><a href="{% url 'about' %}" class="active">about us</a></li>
+                      <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                      <li><a href="{% url 'contact' %}">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--========================================================================================================================
+                                            Image Slider
+=========================================================================================================================-->
+    <div class="aboutPage-imageouter-slider">
+        <div class="aboutPage-imageslider">
+            <img class="aboutPage-myslides" src="{% static 'images/3.jpg' %}" alt="image1">
+            <div class="aboutPage-overlay"></div>
+            <div class="aboutPage-text"><span>About Us</span></div>
+            <div class="aboutPage-caption"><i class=" fas fa-home" aria-hidden="true"></i><span> > About Us</span></div>
+        </div>
+    </div>
+
+    <!--========================================================================================================================
+                                           About School Of Chess
+=========================================================================================================================-->
+    <section class="outer-about">
+        <div class="inner-about">
+            <div class="heading">
+                <div class="inside-heading">
+                    <h2>Welcome To School Of Chess Academy</h2>
+                </div>
+                <div class="element-divider">
+                    <div class="chess-icon">
+                        <p><i class="fa-solid fa-chess"></i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content-outer">
+                <div class="contentwrapper">
+
+                    <p class="para">Welcome to the School of Chess Academy, established in 2010 in the beautiful city of
+                        Srikakulam. Our academy is renowned for providing professional chess coaching and is led by the
+                        esteemed coach, Bheri Chinnarao. As an international FIDE-rated chess player, Coach Chinnarao
+                        brings a wealth of knowledge and experience to our students.</p>
+                    <p class="para">Since our inception, we have trained more than 3000 students, nurturing
+                        their chess skills and helping them achieve their full potential. We take great pride in
+                        maintaining high coaching standards and ensuring that our students receive the best possible
+                        training.</p>
+                    <p class="para">We take immense pride in our track record of producing accomplished chess players
+                        who have excelled at various levels, from local tournaments to national and international
+                        championships. Our students have gone on to represent their schools, districts, and even
+                        countries in prestigious chess events.</p>
+
+                </div>
+
+                <div class="imgwrapper">
+                    <img class="about-image" src="{% static 'images/about.png' %}" alt="about">
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!--========================================================================================================================
+                                            Footer
+=========================================================================================================================-->
+<footer>
+    <div class="footer-container">
+      <div class="sec aboutus">
+        <h2>About Us</h2>
+        <p>We are School of Chess Academy, we are a team of qualified chess professionals dedicated to bringing the
+          benefits of chess to people of all ages. Chess enhances concentration in children, builds higher confidence in
+          young adults, and provides productive engagement for senior citizens..</p>
+        <ul class="sci">
+          <li><a href="https://www.facebook.com/chinnarao.bheri/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/bherichinnarao" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="mailto:schoolofchesss@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <div class="sec quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sec contact">
+        <h2>Contact Us</h2>
+        <ul class="info">
+          <li>
+            <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+            <p class="para-address"> D.No. FF-8, Block No-12, NTR NAGAR COLONY,<br>Srikakulam, Andhra Pradesh.<br>Andhra
+              Pradesh-532001</p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <p><a href="tel:+9959118524">9959118524</a></p>
+          </li>
+          <li>
+            <span><i class="fa fa-envelope"></i></span>
+            <p><a href="mailto:schoolofchesss@gmail.com">soca@gmail.com</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copy-right">
+          <p>© 2023 All Rights Reserved BY School Of Chess Academy </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+   <!--========================================================================================================================
+                                            Script
+=========================================================================================================================-->
+  <script src="{% static 'js/script.js' %}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+</html>

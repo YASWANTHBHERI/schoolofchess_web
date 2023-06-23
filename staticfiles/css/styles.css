@@ -1,0 +1,1604 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito';
+}
+
+:root {
+    --primary-color: #4b0901;
+    --para-color: #4a4a4a;
+    --heading-color: #505828;
+    --white: #fff;
+    --line-color: #4b09013d;
+    --black: #000000;
+    --div-color: #fcfafa;
+    --color-1: #2f3240;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--heading-color);
+}
+
+.para {
+    color: var(--para-color);
+    font-family: 'Nunito';
+    font-size: 1.0625rem;
+    font-weight: 600;
+    line-height: 1.6;
+
+}
+
+.fa-chess {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/*========================================================================================================================
+                                           TopBar Styles
+=========================================================================================================================*/
+.header-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    background: var(--primary-color);
+    height: 3rem;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header-one i {
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.header-one span {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+
+
+/*========================================================================================================================
+                                            NavBar Styles
+=========================================================================================================================*/
+.second-header .container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.second-header .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/*header*/
+.second-header {
+    background-color: var(--div-color);
+}
+
+.second-header .logo img,
+.second-header .nav {
+    padding: 0 15px;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 9rem;
+}
+
+.second-header .nav ul li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.second-header .nav ul li a {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: var(--black);
+    padding: 10px 0;
+    transition: all 0.5s ease;
+}
+
+.second-header .nav ul li a.active,
+.second-header .nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.nav-toggler {
+    height: 34px;
+    width: 44px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    display: none;
+    margin-right: 15px;
+}
+
+.nav-toggler:focus {
+    outline: none;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+}
+
+.nav-toggler span {
+    height: 2px;
+    width: 20px;
+    background-color: var(--black);
+    display: block;
+    margin: auto;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-toggler.active span {
+    background-color: transparent;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    transition: all 0.3s ease;
+}
+
+.nav-toggler span::before {
+    transform: translateY(-6px);
+}
+
+.nav-toggler.active span::before {
+    transform: rotate(45deg);
+}
+
+.nav-toggler span::after {
+    transform: translateY(6px);
+}
+
+.nav-toggler.active span::after {
+    transform: rotate(135deg);
+}
+
+/*========================================================================================================================
+                                            Image slider Styles
+=========================================================================================================================*/
+.imageouter-slider {
+    position: relative;
+    display: block;
+    max-width: 100%;
+}
+
+.imageslider {
+    display: block;
+    max-width: 100%;
+}
+
+.myslides {
+    display: none;
+    width: 100%;
+    height: 32.5rem;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.text span {
+    font-family: 'Raleway';
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.caption {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.caption span {
+    font-family: 'Raleway';
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/*========================================================================================================================
+                                            ABOUT SCHOOL OF CHESS
+=========================================================================================================================*/
+.outer-about {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+.inner-about {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.heading {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+.inside-heading {
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+/*=================================
+    Reusable code Chess-icon
+==================================*/
+.chess-icon {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+}
+
+/*=================================
+     Reusable code element-divider
+==================================*/
+.element-divider p::before {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    background: var(--primary-color);
+    position: absolute;
+    left: 46%;
+    margin-top: 0.6rem;
+    transform: translateX(-50%);
+}
+
+.element-divider p::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    background: var(--primary-color);
+    position: absolute;
+    right: 46%;
+    margin-top: -0.8rem;
+    transform: translateX(50%);
+}
+
+.outer-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inside-heading {
+    display: flex;
+    justify-content: center;
+}
+
+.element-divider {
+
+    display: flex;
+    justify-content: center;
+}
+
+.about-content-outer {
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.contentwrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    flex-basis: 37.5rem;
+    gap: 30px;
+    padding-right: 4rem;
+}
+
+.imgwrapper {
+    display: flex;
+    flex-basis: 25rem;
+}
+
+.outside-button {
+    display: flex;
+    flex: 1;
+    padding-left: 14%;
+}
+
+.moreinfo button {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px 0px 50px 50px;
+    padding: 0.938rem 2.188rem;
+}
+.readmore:hover{
+    background: var(--heading-color);
+    cursor: pointer;
+}
+
+/*========================================================================================================================
+                                            Training and Services Styles
+=========================================================================================================================*/
+.outer-training {
+    padding-bottom: 6.5rem;
+}
+
+.training-services {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.title-inside-heading h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.title-heading {
+    padding-bottom: 1rem;
+}
+
+.training-system {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+}
+
+.card-space {
+    border-radius: 10px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+}
+
+.card-title {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.card-text {
+    width: 100%;
+    max-width: 350px;
+    text-align: justify;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+    font-family: 'Nunito';
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-button {
+    text-align: left;
+}
+
+.card-readmore {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50px 0px 50px 50px;
+    padding: 0.625rem 1.875rem;
+}
+.card-readmore:hover{
+    background: var(--heading-color);
+    cursor: pointer;
+}
+
+
+
+/*========================================================================================================================
+                                            Achievements Styles
+=========================================================================================================================*/
+.our-achievements {
+    background: var(--div-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.our-achievements-inside {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-title-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.achievement-title-inside {
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.flex-awards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6.25rem;
+}
+
+.achievement-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievement-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.vertical-line {
+    border-left: 2px solid var(--primary-color);
+    height: 15rem;
+}
+
+.tourney-img,
+.award,
+.hpy-students {
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+.achievement-content h1 {
+    padding-top: 1rem;
+    color: var(--primary-color);
+    font-family: 'Nunito';
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.achievement-content h3 {
+    padding-top: 0.5rem;
+    color: var(--para-color);
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/*========================================================================================================================
+                                            Footer Styles
+=========================================================================================================================*/
+footer {
+    background-color: #4b0901;
+    color: #fff;
+    font-size: 1rem;
+    padding: 3.125rem 0;
+    padding-bottom: 1rem;
+}
+
+.footer-container {
+    width: 100%;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sec {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    flex-basis: 30%;
+}
+
+.sec h2 {
+    font-size: 1.375rem;
+    padding-bottom: 1rem;
+    color: var(--white);
+    font-family: 'Raleway';
+}
+
+.sec p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+    font-family: 'Nunito';
+    text-align: justify;
+}
+
+.sci {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+}
+
+.sci a {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    text-align: center;
+    line-height: 2.1;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.sci a:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.quicklinks {
+    flex-basis: 25%;
+}
+
+.quicklinks ul {
+    list-style: none;
+    font-size: 1rem;
+    padding: 5px;
+
+}
+
+.quicklinks a {
+    color: #fff;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.quicklinks a::before {
+    content: "";
+    display: inline-block;
+    color: rgb(146, 146, 146);
+    font-size: 10px;
+    padding-right: 0.625rem;
+    padding-top: -0.125rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.contact {
+    flex-basis: 35%;
+}
+
+.contact li {
+    display: flex;
+    padding-bottom: 1.25rem;
+}
+
+.contact li .fa-location-dot {
+    padding-top: 0.625rem;
+    padding-left: 3px;
+    padding-right: 1.25rem;
+    font-size: 1.25rem;
+}
+
+.contact li .fa-phone {
+    padding-left: 3px;
+    padding-right: 1.25rem;
+    font-size: 1.25rem;
+}
+
+.contact li .fa-envelope {
+    padding-left: 3px;
+    padding-right: 1.25rem;
+    font-size: 1.25rem;
+}
+
+.info li p a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer-bottom .container {
+    flex-basis: 35%;
+}
+
+.copy-right p {
+    font-family: 'Nunito';
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+
+
+
+/*========================================================================================================================
+                                            Responsive Styles
+=========================================================================================================================*/
+/*========================================================================================================================
+                                            Responsive 1200px
+=========================================================================================================================*/
+@media(max-width:1220px){
+    .element-divider p::before {
+        position: absolute;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+
+    .element-divider p::after {
+        position: absolute;
+        right: 45%;
+        transform: translateX(50%);
+
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 1024px
+=========================================================================================================================*/
+@media(max-width:1024px) {
+
+    .text span {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .caption span {
+        font-size: 1.5rem;
+    }
+
+    .outer-about {
+        padding-bottom: 4rem;
+    }
+
+    .element-divider p::before {
+        position: absolute;
+        left: 43%;
+        transform: translateX(-50%);
+    }
+
+    .element-divider p::after {
+        position: absolute;
+        right: 43%;
+        transform: translateX(50%);
+
+    }
+
+    .outside-button {
+        display: flex;
+        flex: 1;
+        padding-left: 1%;
+        padding-top: 1rem;
+
+    }
+
+    .footer-line {
+        border: 1px solid #fcfafa;
+    }
+
+    .footer-bottom {
+        padding-top: 1rem;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 991px
+=========================================================================================================================*/
+@media(max-width:991px) {
+    .nav-toggler {
+        display: block;
+    }
+
+    .second-header .nav {
+        width: 100%;
+        padding: 0;
+        max-height: 0px;
+        overflow: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+
+    .second-header .nav.open {
+        visibility: visible;
+    }
+
+    .second-header .nav ul {
+        padding: 12px 15px 0;
+        margin-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .second-header .nav ul li {
+        display: block;
+        margin: 0;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 900px
+=========================================================================================================================*/
+@media(max-width:900px) {
+
+    .imgwrapper img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 60%;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 800px
+=========================================================================================================================*/
+@media(max-width:800px) {
+
+    .imgwrapper img {
+        width: 100%;
+        height: 100%;
+        max-height: 60%;
+    }
+
+    .our-achievements-inside {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .achievement-title-inside {
+        font-size: 1.25rem;
+    }
+
+    .flex-awards {
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .vertical-line {
+        height: 8rem;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .achievement-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .achievement-content h3 {
+        font-size: 1.5rem;
+    }
+
+}
+
+
+/*========================================================================================================================
+                                            Responsive 768px
+=========================================================================================================================*/
+
+@media(max-width:768px) {
+    .header-one {
+        padding: 0 2rem;
+    }
+
+    .top-bar,
+    .social-icons {
+        gap: 0.5rem;
+    }
+
+    .header-one i,
+    .header-one span {
+        font-size: 0.875rem;
+    }
+
+    .text {
+        left: 50%;
+    }
+
+    .caption {
+        top: 57%;
+        left: 50%;
+    }
+
+    .inner-about {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .imgwrapper img {
+        width: 100%;
+        height: 100%;
+        max-height: 60%;
+    }
+
+
+    .training-services {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .card-title {
+
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+
+    .our-achievements-inside {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .achievement-title-inside {
+        font-size: 1.25rem;
+    }
+
+    .flex-awards {
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .vertical-line {
+        height: 8rem;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .achievement-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .achievement-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .element-divider p::before {
+        left: 41%;
+    }
+
+    .element-divider p::after {
+        right: 41%;
+    }
+
+    .footer-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+    }
+}
+/*========================================================================================================================
+                                            Responsive 736px
+=========================================================================================================================*/
+.text{
+    text-align: center;
+    width: 100%;
+}
+
+/*========================================================================================================================
+                                            Responsive 667px
+=========================================================================================================================*/
+@media (max-width: 668px) {
+
+    .imgwrapper img {
+        width: 100%;
+        height: 100%;
+        max-height: 40%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact li {
+        padding: 0;
+    }
+
+    .info li p {
+        font-size: 1rem;
+    }
+
+    .contact li .fa-location-dot {
+        padding-top: 0.625rem;
+        padding-left: 5px;
+
+    }
+
+}
+
+
+/*========================================================================================================================
+                                            Responsive 600px
+=========================================================================================================================*/
+@media (max-width: 600px) {
+    .header-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .header-one i {
+        font-size: 1rem;
+    }
+
+    .header-one span {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .top-bar {
+        gap: 0.7rem;
+    }
+
+    .social-icons {
+        gap: 0.7rem;
+    }
+
+    .social-icons i {
+        font-size: 0.95rem;
+        padding-top: 0.2rem;
+
+    }
+
+    .nav-menu {
+        top: 20%;
+    }
+
+    .imageouter-slider {
+        position: relative;
+        display: block;
+        max-width: 100%;
+        height: 100%;
+        max-height: 18.75rem;
+    }
+
+    .imageslider {
+        display: flex;
+        max-width: 100%;
+        height: 100%;
+        min-height: 18.75rem;
+    }
+
+    .myslides {
+        display: none;
+        width: 100%;
+        height: 100%;
+        max-height: 18.75rem;
+        object-fit: cover;
+    }
+
+    .text span {
+        font-size: 1.88rem;
+        font-weight: 600;
+    }
+
+    .caption span {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+
+    .caption {
+        position: absolute;
+        top: 59%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .element-divider p::before {
+        left: 40%;
+    }
+
+    .element-divider p::after {
+        right: 40%;
+    }
+
+    .outer-about {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .inner-about {
+        padding-top: 0;
+    }
+
+    .heading {
+        padding: 2rem;
+    }
+
+    .element-divider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .about-content-outer {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .contentwrapper {
+        padding-right: 0;
+        flex-basis: auto;
+        gap: 20px;
+        padding-bottom: 1rem;
+
+    }
+
+    .contentwrapper p {
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    .imgwrapper {
+        flex-basis: auto;
+        align-items: center;
+    }
+
+    .imgwrapper img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .outside-button {
+        padding-left: 0;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .training-system {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 500px;
+
+    }
+
+    .card-title {
+        width: 100%;
+        max-width: 500px;
+
+    }
+
+    .card-text {
+        width: 100%;
+        max-width: 500px;
+        font-weight: 600;
+    }
+
+    .flex-awards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        width: 100%;
+        height: auto;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        max-width: 85%;
+        max-height: auto;
+    }
+
+    .achievement-content h1 {
+        font-weight: 800;
+        font-size: 2.2rem;
+    }
+
+    .achievement-content h3 {
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+
+    .achievement-title-inside {
+        font-size: 1.35rem;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact li {
+        padding: 0;
+    }
+
+    .info li p {
+        font-size: 1rem;
+    }
+
+    .contact li .fa-location-dot {
+        padding-top: 0.625rem;
+        padding-left: 5px;
+
+    }
+
+    .footer-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .aboutus {
+        padding-right: 1rem;
+
+    }
+
+    .sec {
+        padding-left: 1rem;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 533px
+=========================================================================================================================*/
+@media (max-width: 534px) {
+    .text span {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .element-divider p::before {
+        left: 38%;
+    }
+
+    .element-divider p::after {
+        right: 38%;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 480px
+=========================================================================================================================*/
+@media (max-width: 480px) {
+    .text {
+
+        top: 50%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .caption {
+        top: 59%;
+        left: 50;
+        width: 100%;
+        text-align: center;
+    }
+
+    .element-divider p::before {
+        left: 37%;
+    }
+
+    .element-divider p::after {
+        right: 37%;
+    }
+
+    .para-address {
+        width: 100%;
+        max-width: 70%;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 414px
+=========================================================================================================================*/
+@media (max-width: 415px) {
+    .text span {
+        font-size: 1.5rem;
+    }
+
+    .myslides {
+        display: none;
+        width: 100%;
+        height: 18.75rem;
+        object-fit: cover;
+    }
+
+    .inside-heading {
+        font-size: 1rem;
+    }
+
+    .heading {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .title-inside-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .achievement-title-inside {
+        font-size: 1rem;
+    }
+
+    .element-divider p::before {
+        left: 39%;
+        width: 3rem;
+    }
+
+    .element-divider p::after {
+        right: 39%;
+        width: 3rem;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        width: 100%;
+        height: auto;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        max-width: 50%;
+    }
+
+    .achievement-title-heading {
+        padding-bottom: 2rem;
+    }
+
+    .our-achievements {
+        padding-bottom: 3rem;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 393px
+=========================================================================================================================*/
+@media (max-width: 394px) {
+    .para {
+        font-size: 1rem;
+    }
+
+    .element-divider p::before {
+        left: 39%;
+        width: 3rem;
+    }
+
+    .element-divider p::after {
+        right: 39%;
+        width: 3rem;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 390px
+=========================================================================================================================*/
+@media (max-width: 390px) {
+    .text span {
+        font-size: 1.3rem;
+    }
+
+    .caption span {
+        font-size: 1rem;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 335px
+=========================================================================================================================*/
+@media (max-width: 335px) {
+    .text span {
+        font-size: 1.2rem;
+    }
+
+    .caption span {
+        font-size: 1rem;
+    }
+
+    .caption {
+        top: 57%;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 308px
+=========================================================================================================================*/
+@media (max-width: 308px) {
+    .text span {
+        font-size: 1rem;
+    }
+
+    .caption span {
+        font-size: 0.8rem;
+    }
+
+    .caption {
+        top: 57%;
+    }
+}
+
+/*========================================================================================================================
+                                            Responsive 300px
+=========================================================================================================================*/
+@media (max-width: 320px) {
+    .header-one span {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .header-one i {
+        font-size: 0.9rem;
+    }
+
+    .element-divider p::before {
+        left: 37%;
+        width: 3rem;
+    }
+
+    .element-divider p::after {
+        right: 37%;
+        width: 3rem;
+    }
+}
+
+@media (max-width: 260px) {
+
+    .para {
+        font-size: 0.8rem;
+    }
+
+    .header-one {
+        gap: 0;
+    }
+
+    .header-one span {
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .header-one i {
+        font-size: 0.8rem;
+    }
+
+    .element-divider p::before {
+        left: 34%;
+        width: 2.5rem;
+    }
+
+    .element-divider p::after {
+        right: 34%;
+        width: 2.5rem;
+    }
+
+    .fa-chess {
+        font-size: 1rem;
+    }
+
+    .text span {
+        font-size: 0.8rem;
+    }
+
+    .caption span {
+        font-size: 0.6rem;
+    }
+
+    .caption {
+        top: 55%;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .title-inside-heading h2 {
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .achievement-title-inside {
+        padding-bottom: 0.5rem;
+    }
+
+    .tourney-img,
+    .award,
+    .hpy-students {
+        width: 5.5rem;
+        height: auto;
+    }
+
+    .achievement-content h3 {
+        font-size: 1rem;
+    }
+
+    .achievement-content h1 {
+        font-size: 1.2rem;
+    }
+    .sec h2 {
+        font-size: 1rem;
+        
+    }
+    .sec p{
+        font-size: 0.8rem;
+    }
+    .sci a {
+        display: block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--white);
+        text-align: center;
+        line-height: 1.6;
+        color: var(--primary-color);
+        font-size: 1rem;
+    }
+    .quicklinks a {
+        color: #fff;
+        text-decoration: none;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 0.8rem;
+    }
+    .info li p {
+        font-size: 0.8rem;
+    }
+    .contact li .fa-location-dot {
+        font-size: 1rem;
+    }
+    .contact li .fa-phone{
+        font-size: 1rem;
+    }
+    .contact li .fa-envelope{
+        font-size: 1rem;
+    }
+}

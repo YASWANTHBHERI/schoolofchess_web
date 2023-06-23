@@ -1,0 +1,245 @@
+{% load livereload_tags %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>School Of Chess Srikakulam</title>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}" >
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!--========================================================================================================================
+                                            TopBar
+=========================================================================================================================-->
+
+  <header class="header-one">
+    <div class="top-bar left">
+      <i class="fa fa-phone"></i>
+      <span class="number">9959118524</span>
+      <i class="fa fa-envelope"></i>
+      <span class="mail">soca@gmail.com</span>
+    </div>
+
+    <div class="social-icons right">
+      <a href="https://www.facebook.com/chinnarao.bheri/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://twitter.com/bherichinnarao" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://wa.me/9959118524" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </header>
+
+
+  <!--========================================================================================================================
+                                           NavBar
+=========================================================================================================================-->
+
+  <header class="second-header">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="logo">
+          <a href="#"><img src="{% static 'images/logo.png' %}" alt="logo"></a>
+        </div>
+        <button type="button" class="nav-toggler">
+          <span></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="{% url 'home' %}">home</a></li>
+            <li><a href="{% url 'about' %}">about us</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}" class="active">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!--========================================================================================================================
+                                          Contact
+=========================================================================================================================-->
+  <section class="contact-page">
+    <div class="heading">
+      <div class="inside-heading">
+        <h2>Get In Touch With Us</h2>
+      </div>
+      <div class="element-divider">
+        <div class="chess-icon">
+          <p><i class="fa-solid fa-chess"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="contact-form form">
+        <h3>Send a message</h3>
+        <form action="{% url 'contact' %}" method="POST" >{% csrf_token %}
+          <div class="formbox">
+            <div class="row50">
+              <div class="inputbox">
+                <span>First Name</span>
+                <input type="text" name="firstname" id="contact-firstname" onkeyup="validateName()">
+                <span id="firstname-error"></span>
+              </div>
+              <div class="inputbox">
+                <span>Last Name</span>
+                <input type="text" name="lastname" id="contact-lastname" onkeyup="validatelastName()">
+                <span id="lastname-error"></span>
+              </div>
+            </div>
+
+            <div class="row50">
+              <div class="inputbox">
+                <span>Email</span>
+                <input type="text" name="email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+              </div>
+
+
+              <div class="inputbox">
+                <span>Mobile</span>
+                <input type="text" name="phone" id="contact-phone" onkeyup="validatePhone()">
+                <span id="mobile-error"></span>
+              </div>
+
+
+            </div>
+            <div class="row100">
+              <div class="inputbox">
+                <span>Message</span>
+                <textarea name="message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+              </div>
+            </div>
+            <div class="row100">
+              <div class="inputbox">
+                <input type="submit" value="submit" name="submit" id="contact-submit" onclick="validateSubmit()">
+                <span id="submit-error"></span>
+              </div>
+
+            </div>
+          </div>
+        </form>
+
+
+
+      </div>
+
+      <div class="contact-form info">
+        <h3>Contact Us</h3>
+        <div class="infobox">
+          <div>
+            <span class="location"><ion-icon name="location-outline"></ion-icon></span>
+            <p>D.No. FF-8, Block No-12, NTR NAGAR COLONY,<br>Srikakulam, Andhra Pradesh-532001</p>
+          </div>
+          <div>
+            <span><ion-icon name="mail-open-outline"></ion-icon></span>
+            <a href="mailto:schoolofchesss@gmail.com">soca@gmail.com</a>
+          </div>
+          <div>
+            <span><ion-icon name="call-outline"></ion-icon></span>
+            <a href="tel:9959118524">9959118524</a>
+          </div>
+          <ul class="contactpage-sci">
+            <li><a href="https://www.facebook.com/chinnarao.bheri/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://twitter.com/bherichinnarao" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="https://wa.me/9959118524" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="contact-form map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.3873391063025!2d83.89414917485271!3d18.283886382764308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c15796810e4f9%3A0xabe0192042f310ad!2sSCHOOL%20OF%20CHESS(AC)%20SRIKAKULAM(Estd%3A2010)!5e0!3m2!1sen!2sin!4v1687254079292!5m2!1sen!2sin"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!--========================================================================================================================
+                                            Footer
+=========================================================================================================================-->
+  <footer>
+    <div class="footer-container">
+      <div class="sec aboutus">
+        <h2>About Us</h2>
+        <p>We are School of Chess Academy, we are a team of qualified chess professionals dedicated to bringing the
+          benefits of chess to people of all ages. Chess enhances concentration in children, builds higher confidence in
+          young adults, and provides productive engagement for senior citizens..</p>
+        <ul class="sci">
+          <li><a href="https://www.facebook.com/chinnarao.bheri/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/bherichinnarao" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="mailto:schoolofchesss@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <div class="sec quicklinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'gallery' %}">Gallery</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+      <div class="sec contact">
+        <h2>Contact Us</h2>
+        <ul class="info">
+          <li>
+            <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+            <p class="para-address"> D.No. FF-8, Block No-12, NTR NAGAR COLONY,<br>Srikakulam, Andhra Pradesh.<br>Andhra
+              Pradesh-532001</p>
+          </li>
+          <li>
+            <span><i class="fa-solid fa-phone"></i></span>
+            <p><a href="tel:+9959118524">9959118524</a></p>
+          </li>
+          <li>
+            <span><i class="fa fa-envelope"></i></span>
+            <p><a href="mailto:schoolofchesss@gmail.com">soca@gmail.com</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copy-right">
+          <p>© 2023 All Rights Reserved BY School Of Chess Academy </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--========================================================================================================================
+                                            Script
+=========================================================================================================================-->
+  <script src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/contact.js' %}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+
+</html>
+
+
+
+

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #4b0901;
+    --para-color: #4a4a4a;
+    --heading-color: #505828;
+    --white: #fff;
+    --line-color: #4b09013d;
+    --black: #000000;
+    --div-color: #fcfafa;
+    --color-1: #2f3240;
+}
+body{
+    background: linear-gradient(135deg, #ECECEC 0%, #FFFFFF 100%)
+}
+.contact-page{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form{
+    grid-area: form;
+}
+.info{
+    grid-area: info;
+}
+.map{
+    grid-area: map;
+}
+.contact-form{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    background: var(--white);
+
+}
+.box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+}
+.contact-form h3{
+    color: var(--heading-color);
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-family: 'Raleway';
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/*form*/
+
+.formbox{
+    position: relative;
+    width: 100%;
+}
+.formbox .row50{
+    display: flex;
+    gap: 20px;
+}
+.inputbox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.formbox .row100 .inputbox{
+    width: 100%;
+}
+.inputbox span{
+    color: var(--para-color);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.inputbox input{
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #333;
+}
+.inputbox textarea{
+    resize: none;
+    min-height: 120px;
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid #333;
+    margin-bottom: 10px;
+}
+.inputbox input[type="submit"]{
+    background: var(--primary-color);
+    color: var(--white);
+    font-size: 1.1rem;
+    max-width: 120px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+
+.info .infobox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info .infobox div span{
+    min-width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.info .infobox div p{
+    color: var(--para-color);
+    font-size: 1rem;
+    font-family: 'Nunito';
+    font-weight: 600;
+}
+.info .infobox div a{
+    color: var(--para-color);
+    font-size: 1rem;
+    font-family: 'Nunito';
+    font-weight: 600;
+}
+.contactpage-sci{
+    margin-top: 30px;
+    display: flex;
+}
+.contactpage-sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+.contactpage-sci li a{
+    color: var(--primary-color);
+    font-size: 2rem;
+    
+}
+.contactpage-sci li a:hover{
+   color: var(--para-color);
+}
+.map{
+    padding: 0;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+/*========================================================================================================================
+                                            javascript validation styles
+=========================================================================================================================*/
+#firstname-error{
+    color: red;
+}
+#lastname-error{
+    color: red;
+}
+#email-error{
+    color: red;
+}
+#phone-error{
+    color: red;
+}
+#message-error{
+    color: red;
+}
+#submit-error{
+    color: red;
+}
+
+.inputbox span ion-icon{
+    color: seagreen;
+}
+
+
+/*========================================================================================================================
+                                            Responsive styles
+=========================================================================================================================*/
+
+@media(max-width: 991px){
+    .box{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "form"
+        "info"
+        "map";
+    }
+   
+    .formbox .row50{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .inputbox{
+        width: 100%;
+    }
+    .contact-form{
+        padding: 30px;
+    }
+    .map{
+        min-height: 300px;
+        padding: 0;
+    }
+    .contact-page{
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+   
+
+}
